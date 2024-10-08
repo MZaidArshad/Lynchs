@@ -1,0 +1,207 @@
+/* Video Container */
+.header {
+  position: relative;
+}
+.video-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Background video styling */
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 1;
+}
+
+/* Overlay content */
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 60px 0 50px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  /* padding-top: 25px; */
+  padding-bottom: 35px !important;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+.content .logo img {
+  height: 30px;
+}
+.content p {
+  font-size: 19px;
+  font-weight: 400 !important;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+.content .header_bottom {
+  text-align: center;
+}
+
+.content .header_bottom .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.content .header_bottom .menu a,
+.content .header_bottom .menu button {
+  color: #ffff;
+  background-color: transparent !important;
+  border: none;
+  text-decoration: underline;
+  font-weight: 500 !important;
+  font-size: 19px;
+  font-weight: 500 !important;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+.header_bottom .down_arrow img {
+  width: 28px;
+  cursor: pointer;
+}
+
+/* sidebar */
+
+.sidebar {
+  height: 100vh;
+  width: 50%;
+  background: #0a2516;
+  position: absolute;
+  top: 0;
+  right: -120%;
+  z-index: 100;
+  color: #ffff !important;
+  padding: 20px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+.sidebar.show {
+  right: 0;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  width: 7px;
+  background-color: #c7c7c7;
+  border-radius: 5px;
+}
+
+.sidebar .closeBtn {
+  text-align: right;
+}
+.sidebar .closeBtn button {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  color: #ffff;
+}
+.sidebar_content {
+  text-align: left;
+  padding: 30px 50px;
+}
+.sidebar .address p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.sidebar input,
+.sidebar textarea {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+.sidebar input {
+  border: none !important;
+  border-bottom: 1px solid #ffff !important;
+  border-radius: 0 !important;
+  padding-left: 0;
+}
+
+.sidebar input[type="checkbox"] {
+  accent-color: #ffffff !important; /* For checkbox style */
+  outline: 1px solid #ffff;
+  border: none !important;
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+}
+
+.sidebar input::placeholder {
+  color: #ffff !important;
+}
+
+.sidebar input:focus {
+  box-shadow: none !important;
+}
+
+.sidebar textarea {
+  resize: none;
+  border-radius: 0 !important;
+}
+
+.sidebar textarea::placeholder {
+  color: #ffff !important;
+}
+
+.sidebar button {
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid white;
+  background-color: #ffff;
+  color: #0a2516;
+  border-radius: 0 !important;
+}
+
+.sidebar button:hover {
+  background-color: transparent;
+  color: #ffff;
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar_content {
+    padding: 30px 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sidebar {
+    width: 80%;
+  }
+
+  .sidebar_content {
+    padding: 30px 0px;
+  }
+}

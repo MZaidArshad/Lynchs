@@ -1,0 +1,50 @@
+/* Slider container to align the whole component */
+.slider-container {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+/* Styling individual slides */
+.slide {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.slide p {
+  margin: 50px 0 !important;
+  font-size: 19px;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+/* Center mode styling to show partial slides */
+.slick-center .slide {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Indicator styles */
+.slider-indicators {
+  display: flex;
+  justify-content: center;
+}
+
+.indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 0 5.5px;
+  cursor: pointer; /* Add pointer to indicate it's clickable */
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background: #000000;
+}
+
+@media screen and (max-width: 600px) {
+}
