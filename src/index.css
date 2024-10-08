@@ -12,6 +12,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  overflow-x: hidden !important;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -23,8 +27,7 @@ a:hover {
 
 body {
   margin: 0;
-  min-width: 320px;
-  /* min-height: 100vh; */
+  /* min-width: 320px; */
   overflow-x: hidden !important;
 }
 
