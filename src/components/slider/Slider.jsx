@@ -18,7 +18,7 @@ const CustomSlider = () => {
     { id: 2, content: "1/18 Margaret St, Moorabbin, Vic 3189", img: img2 },
     { id: 3, content: "6 Hughes Street, Brighton East, Vic 3187", img: img3 },
     { id: 4, content: "21 Swan Road, Murrumbeena, Vic 3163", img: img4 },
-    { id: 4, content: "3/39 Cromer Rd, Beaumaris, Vic 3193", img: img5 },
+    { id: 5, content: "3/39 Cromer Rd, Beaumaris, Vic 3193", img: img5 },
   ];
 
   const settings = {
