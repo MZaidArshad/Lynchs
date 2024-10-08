@@ -112,7 +112,7 @@ const Team = () => {
 
   return (
     <div className="container team">
-      <div className="row gy-5 gx-sm-0">
+      <div className="row gy-5 gx-3">
         {teamDetails.slice(0, visibleTeamMembers).map((item, index) => (
           <div key={index} className="col-6 col-md-3 col-lg-3">
             <TeamCard
