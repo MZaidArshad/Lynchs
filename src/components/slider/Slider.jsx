@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; // Import slick CSS
 import "slick-carousel/slick/slick-theme.css"; // Import slick theme CSS
-import "./Slider.css"; // Your custom styles
+import "./slider.css"; // Your custom styles
 import img1 from "../../assets/06 LIST OF PROPERTY/(01) 6 Hughes Street, Brighton East, Vic 3187.jpg";
 import img2 from "../../assets/06 LIST OF PROPERTY/(02) 3_21 Barry Street, Bentleigh, Vic 3204.jpg";
 import img3 from "../../assets/06 LIST OF PROPERTY/(03) 1_18 Margaret St, Moorabbin, Vic 3189.jpeg";
