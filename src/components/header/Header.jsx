@@ -62,15 +62,16 @@ const Header = () => {
 
       <div className={`sidebar ${showSidebar ? "show" : ""}`}>
         <div className="closeBtn">
-          <button onClick={() => setShowSidebar(false)}>close</button>
+          <button onClick={() => setShowSidebar(false)}>Close</button>
         </div>
         <div className="sidebar_content">
-          <div className="address">
+          <div className="address ">
             <p>
-              10 Station St <br /> Moorabbin VIC 3189 lynchs.com
+              10 Station St <br /> Moorabbin VIC 3189
             </p>
             <p className="mt-4">03 95551911</p>
             <p>reception@lynchs.com</p>
+            <p>lynchs.com</p>
           </div>
 
           <form className="py-4 rounded-3" onSubmit={handleSubmit}>
@@ -183,7 +184,7 @@ const Header = () => {
               <textarea
                 className="form-control bg-dark text-light border-light"
                 id="notes"
-                rows="4"
+                rows="6"
                 placeholder="Notes (Optional)"
               ></textarea>
             </div>

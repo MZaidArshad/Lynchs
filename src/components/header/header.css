@@ -1,7 +1,7 @@
 /* Video Container */
-.header {
+/* .header {
   position: relative;
-}
+} */
 .video-container {
   position: relative;
   height: 100vh;
@@ -89,14 +89,17 @@
 
 .sidebar {
   height: 100vh;
-  width: 50%;
+  width: 62%;
   background: #0a2516;
-  position: absolute;
+  position: fixed;
+
   top: 0;
   right: -120%;
   z-index: 100;
   color: #ffff !important;
   padding: 20px;
+  padding-top: 50px;
+  padding-right: 50px;
   overflow-y: auto;
   transition: 0.4s;
 }
@@ -106,14 +109,14 @@
 }
 
 .sidebar::-webkit-scrollbar {
-  width: 6px;
+  display: none;
 }
 
-.sidebar::-webkit-scrollbar-thumb {
+/* .sidebar::-webkit-scrollbar-thumb {
   width: 7px;
   background-color: #c7c7c7;
   border-radius: 5px;
-}
+} */
 
 .sidebar .closeBtn {
   text-align: right;
@@ -123,14 +126,21 @@
   border: none;
   text-decoration: underline;
   color: #ffff;
+  font-size: 16px !important;
 }
 .sidebar_content {
   text-align: left;
-  padding: 30px 50px;
+  padding: 110px 120px;
+  font-size: 16.8px !important;
+}
+
+.sidebar_content .address {
+  margin-bottom: 50px !important;
 }
 .sidebar .address p {
   margin-bottom: 0;
   font-size: 16px;
+  line-height: 20px;
 }
 
 .sidebar input,
@@ -147,12 +157,15 @@
 }
 
 .sidebar input[type="checkbox"] {
-  accent-color: #ffffff !important; /* For checkbox style */
   outline: 1px solid #ffff;
   border: none !important;
   width: 13px;
   height: 13px;
   cursor: pointer;
+}
+
+.sidebar input[type="checkbox"]:checked {
+  background-color: white !important; /* Change the background color to white */
 }
 
 .sidebar input::placeholder {
@@ -166,6 +179,7 @@
 .sidebar textarea {
   resize: none;
   border-radius: 0 !important;
+  border-color: gray !important;
 }
 
 .sidebar textarea::placeholder {
@@ -174,33 +188,29 @@
 
 .sidebar button {
   padding: 8px;
-  font-size: 16px;
+  font-size: 18px;
   border: 2px solid white;
   background-color: #ffff;
   color: #0a2516;
   border-radius: 0 !important;
 }
 
-.sidebar button:hover {
+/* .sidebar button:hover {
   background-color: transparent;
   color: #ffff;
-}
+} */
 
-@media screen and (max-width: 800px) {
-  .sidebar_content {
-    padding: 30px 20px;
-  }
-}
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .sidebar {
-    width: 70%;
+    padding-top: 20px;
+    width: 100% !important;
+  }
+
+  .sidebar_content {
+    padding: 30px 40px;
   }
 }
 @media screen and (max-width: 500px) {
-  .sidebar {
-    width: 80%;
-  }
-
   .sidebar_content {
     padding: 30px 0px;
   }
