@@ -10,10 +10,23 @@
 .teamCard_content {
   text-align: left;
   margin-top: 20px;
-  font-size: 19px;
+  font-size: 20px;
   font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
 .teamCard_content p {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 450px) {
+  .teamCard_content {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .teamCard_content {
+    margin-top: 20px;
+    font-size: 16px;
+  }
 }

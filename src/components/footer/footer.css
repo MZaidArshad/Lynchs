@@ -2,12 +2,13 @@
   background: #0a2516;
   color: #ffff !important;
   text-align: left !important;
-  padding: 70px 0px 80px !important;
+  padding: 70px 60px 80px !important;
   margin-top: 30px !important;
+  font-size: 18px;
 }
 
 .footer .copy {
-  font-size: 18.5px;
+  font-size: 20px;
 }
 
 .footer a {
@@ -40,6 +41,7 @@
   flex-direction: column;
   gap: 20px;
   font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 400;
 }
 
 .footer_content .newsletter p {
@@ -74,5 +76,15 @@
 
   .footer ul {
     text-align: left !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    font-size: 12px;
+  }
+
+  .footer .copy {
+    font-size: 12px;
   }
 }

@@ -6,16 +6,19 @@
 .about .about_image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .about_content {
   height: 100%;
   width: 100%;
   text-align: left;
-  padding: 50px 100px;
+  padding: 50px 150px;
   display: flex; /* Use flexbox layout */
   flex-direction: column; /* Stack children vertically */
   justify-content: flex-end; /* Align content at the bottom */
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  color: var(--text-color);
 }
 
 .about_content_content {
@@ -23,11 +26,11 @@
 }
 
 .about_content_content .heading {
-  margin-bottom: 120px;
-  font-size: 21px;
+  margin-bottom: 150px;
+  font-size: 22px;
 }
 .about_content_content .desc {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -48,10 +51,24 @@
   }
   .about_content {
     padding: 30px 0;
-    text-align: justify;
   }
   .about .about_image img {
     width: 100%;
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about {
+    padding: 24px !important;
+  }
+
+  .about_content_content .heading {
+    font-size: 14px;
+    margin-bottom: 50px !important;
+  }
+  .about_content_content .desc {
+    font-size: 12px;
+    width: 100% !important;
   }
 }

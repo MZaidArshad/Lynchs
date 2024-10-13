@@ -37,7 +37,7 @@
   z-index: 2;
   color: white;
   text-align: center;
-  padding: 60px 0 50px !important;
+  padding: 66px 0 50px !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,12 +48,14 @@
 }
 
 .content .logo img {
-  height: 30px;
+  height: 33px;
 }
 .content p {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 400 !important;
   font-family: "neue-haas-grotesk-display", sans-serif;
+  letter-spacing: 3%;
+  margin-bottom: 0;
 }
 
 .content .header_bottom {
@@ -64,8 +66,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  margin-bottom: 30px;
+  gap: 40px;
+  margin-bottom: 60px;
 }
 
 .content .header_bottom .menu a,
@@ -74,14 +76,14 @@
   background-color: transparent !important;
   border: none;
   text-decoration: underline;
-  font-weight: 500 !important;
-  font-size: 19px;
-  font-weight: 500 !important;
-  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 400 !important;
+  font-size: 20px;
+  font-weight: 400 !important;
+  font-family: "neue-haas-grotesk-display", sans-serif !important;
 }
 
 .header_bottom .down_arrow img {
-  width: 28px;
+  width: 27px;
   cursor: pointer;
 }
 
@@ -89,10 +91,9 @@
 
 .sidebar {
   height: 100vh;
-  width: 62%;
+  width: 50%;
   background: #0a2516;
   position: fixed;
-
   top: 0;
   right: -120%;
   z-index: 100;
@@ -101,7 +102,9 @@
   padding-top: 50px;
   padding-right: 50px;
   overflow-y: auto;
-  transition: 0.4s;
+  transition: 0.6s;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 400 !important;
 }
 
 .sidebar.show {
@@ -111,12 +114,6 @@
 .sidebar::-webkit-scrollbar {
   display: none;
 }
-
-/* .sidebar::-webkit-scrollbar-thumb {
-  width: 7px;
-  background-color: #c7c7c7;
-  border-radius: 5px;
-} */
 
 .sidebar .closeBtn {
   text-align: right;
@@ -131,7 +128,7 @@
 .sidebar_content {
   text-align: left;
   padding: 110px 120px;
-  font-size: 16.8px !important;
+  font-size: 18px !important;
 }
 
 .sidebar_content .address {
@@ -139,7 +136,7 @@
 }
 .sidebar .address p {
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
 }
 
@@ -147,6 +144,7 @@
 .sidebar textarea {
   background-color: transparent !important;
   color: #fff !important;
+  font-size: 18px;
 }
 
 .sidebar input {
@@ -162,6 +160,19 @@
   width: 13px;
   height: 13px;
   cursor: pointer;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-items: start;
+  padding: 20px 0 0;
+}
+
+.property-management {
+  grid-column: span 2;
 }
 
 .sidebar input[type="checkbox"]:checked {
@@ -180,6 +191,7 @@
   resize: none;
   border-radius: 0 !important;
   border-color: gray !important;
+  height: 175px;
 }
 
 .sidebar textarea::placeholder {
@@ -188,11 +200,20 @@
 
 .sidebar button {
   padding: 8px;
-  font-size: 18px;
+  font-size: 20px;
   border: 2px solid white;
   background-color: #ffff;
   color: #0a2516;
   border-radius: 0 !important;
+}
+
+.sidebar_logo,
+.sidebar_footer_close_btn {
+  display: none;
+}
+
+.sidebar_logo img {
+  height: 19px;
 }
 
 /* .sidebar button:hover {
@@ -210,6 +231,82 @@
     padding: 30px 40px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .content .logo img {
+    height: 19px;
+  }
+
+  .content p {
+    font-size: 14px;
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content .header_bottom .menu a,
+  .content .header_bottom .menu button {
+    font-size: 12px;
+  }
+
+  .header_bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+  }
+
+  /* Sidebar */
+
+  .sidebar {
+    padding: 59px 20px;
+  }
+
+  .sidebar .closeBtn {
+    display: none;
+  }
+
+  .sidebar_logo,
+  .sidebar_footer_close_btn {
+    display: block !important;
+  }
+
+  .sidebar_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sidebar_footer_close_btn {
+    font-size: 14px !important;
+    display: flex;
+  }
+
+  .sidebar_content {
+    padding: 100px 0px !important;
+    font-size: 12px !important;
+  }
+
+  .sidebar_content .address {
+    margin-bottom: 50px !important;
+  }
+  .sidebar .address p {
+    font-size: 12px;
+  }
+
+  .sidebar input,
+  .sidebar textarea {
+    font-size: 12px;
+  }
+
+  .sidebar button {
+    padding: 8px 0;
+    font-size: 14px;
+    margin-top: 30px;
+    width: 133px !important;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .sidebar_content {
     padding: 30px 0px;

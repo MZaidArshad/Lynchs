@@ -10,7 +10,6 @@ const Header = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.alert("Thankyou for contacting us!");
   };
 
   const handleDown = () => {
@@ -64,6 +63,12 @@ const Header = () => {
         <div className="closeBtn">
           <button onClick={() => setShowSidebar(false)}>Close</button>
         </div>
+        <div className="sidebar_logo">
+          <img
+            src="assets/01 LOGO/PNG (TRANSPARENT)/LYNCHS_RGB_BRANDMARK_WHITE.png"
+            alt="logo"
+          />
+        </div>
         <div className="sidebar_content">
           <div className="address ">
             <p>
@@ -74,7 +79,7 @@ const Header = () => {
             <p>lynchs.com</p>
           </div>
 
-          <form className="py-4 rounded-3" onSubmit={handleSubmit}>
+          <form className="py-2 py-md-4  rounded-3" onSubmit={handleSubmit}>
             <div className="row gy-2 mb-3">
               <div className="col-12">
                 <input
@@ -104,76 +109,80 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="mb-4">
+            <div className="mb-3 mt-4">
               <label className="form-label">Enquiry Type</label>
-              <div className="d-flex flex-wrap">
-                <div className="form-check me-3">
+              <div className="form-grid">
+                <div className="form-check">
                   <input
                     className="form-check-input"
                     type="checkbox"
                     id="buying"
                   />
-                  <label className="form-check-label" for="buying">
+                  <label className="form-check-label" htmlFor="buying">
                     Buying
                   </label>
                 </div>
-                <div className="form-check me-3">
+                <div className="form-check">
                   <input
                     className="form-check-input"
                     type="checkbox"
                     id="selling"
                   />
-                  <label className="form-check-label" for="selling">
+                  <label className="form-check-label" htmlFor="selling">
                     Selling
                   </label>
                 </div>
-                <div className="form-check me-3">
+                <div className="form-check">
                   <input
                     className="form-check-input"
                     type="checkbox"
                     id="rentals"
                   />
-                  <label className="form-check-label" for="rentals">
+                  <label className="form-check-label" htmlFor="rentals">
                     Rentals
                   </label>
                 </div>
-                <div className="form-check me-3">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="propertyManagement"
-                  />
-                  <label className="form-check-label" for="propertyManagement">
-                    Property Management
-                  </label>
-                </div>
-                <div className="form-check me-3">
+                <div className="form-check">
                   <input
                     className="form-check-input"
                     type="checkbox"
                     id="press"
                   />
-                  <label className="form-check-label" for="press">
+                  <label className="form-check-label" htmlFor="press">
                     Press
                   </label>
                 </div>
-                <div className="form-check me-3">
+                <div className="form-check property-management">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="propertyManagement"
+                  />
+                  <label
+                    className="form-check-label"
+                    htmlFor="propertyManagement"
+                  >
+                    Property Management
+                  </label>
+                </div>
+
+                <div className="form-check">
                   <input
                     className="form-check-input"
                     type="checkbox"
                     id="appraisals"
                   />
-                  <label className="form-check-label" for="appraisals">
+                  <label className="form-check-label" htmlFor="appraisals">
                     Appraisals
                   </label>
                 </div>
-                <div className="form-check me-3">
+                <div className="form-check">
                   <input
                     className="form-check-input"
                     type="checkbox"
                     id="others"
                   />
-                  <label className="form-check-label" for="others">
+                  <label className="form-check-label" htmlFor="others">
                     Others
                   </label>
                 </div>
@@ -198,10 +207,12 @@ const Header = () => {
                 </a>
               </label>
             </div>
-
-            <button type="submit" className="btn btn-outline-light w-50">
-              Submit
-            </button>
+            <div className="sidebar_footer">
+              <button className="btn btn-outline-light w-50">Submit</button>
+              <div className="closeBtn sidebar_footer_close_btn">
+                <button onClick={() => setShowSidebar(false)}>Close</button>
+              </div>
+            </div>
           </form>
         </div>
       </div>
