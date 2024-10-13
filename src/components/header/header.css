@@ -75,11 +75,27 @@
   color: #ffff;
   background-color: transparent !important;
   border: none;
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: 400 !important;
   font-size: 20px;
   font-weight: 400 !important;
   font-family: "neue-haas-grotesk-display", sans-serif !important;
+  position: relative;
+}
+.content .header_bottom .menu a::after,
+.content .header_bottom .menu button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 3.5px; /* Adjust this value as needed for spacing */
+  width: 100%;
+  height: 1.3px; /* Adjust the thickness of the underline */
+  background-color: #ffff; /* Set the underline color */
+  transition: width 0.3s ease; /* Smooth transition effect */
+}
+
+.content .header_bottom .menu button {
+  padding: 0 !important;
 }
 
 .header_bottom .down_arrow img {
@@ -121,7 +137,7 @@
 .sidebar .closeBtn button {
   background-color: transparent;
   border: none;
-  text-decoration: underline;
+
   color: #ffff;
   font-size: 16px !important;
 }
@@ -323,5 +339,11 @@
     align-items: center;
     justify-items: start;
     padding: 20px 0 0;
+  }
+}
+
+@media screen and (max-width: 1448px) {
+  .sidebar_content {
+    padding: 110px 0 110px 70px;
   }
 }
