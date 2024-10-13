@@ -8,15 +8,15 @@
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 680px) {
+  .sectionHeading {
+    padding: 30px 10px 30px 30px !important;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .sectionHeading {
     font-size: 14px;
     padding: 30px 10px 30px 20px !important;
-  }
-}
-
-@media screen and (max-width: 680px) {
-  .sectionHeading {
-    padding: 30px 10px 30px 30px !important;
   }
 }

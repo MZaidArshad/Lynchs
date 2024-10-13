@@ -87,4 +87,11 @@
   .footer .copy {
     font-size: 12px;
   }
+  .copyright {
+    order: -2 !important;
+  }
+
+  .social_links_div {
+    order: 1 !important;
+  }
 }

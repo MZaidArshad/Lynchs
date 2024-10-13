@@ -5,13 +5,13 @@ import img from "../../assets/about.png";
 const About = () => {
   return (
     <div className="container-fluid about">
-      <div className="row">
-        <div className="col-12 col-md-6 col-lg-6 px-0">
+      <div className="row gx-0">
+        <div className="col-12 col-md-6 col-lg-6 ">
           <div className="about_image">
             <img src={img} alt="" />
           </div>
         </div>
-        <div className="col-12 col-md-6 col-lg-6 px-0">
+        <div className="col-12 col-md-6 col-lg-6 ">
           <div className="about_content">
             <div className="about_content_content">
               <p className="heading">
