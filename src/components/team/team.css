@@ -5,8 +5,9 @@
   padding-right: 60px !important;
 }
 
-.loadmore_btn .btn {
+.loadmore-btn .btn {
   border-radius: 0 !important;
+  font-size: 18px !important;
 }
 
 @media screen and (max-width: 680px) {
@@ -19,5 +20,11 @@
   .team {
     padding-left: 20px !important;
     padding-right: 20px !important;
+  }
+
+  .loadmore-btn .btn {
+    padding: 8px 15px !important;
+    font-size: 12px !important;
+    width: 144px !important;
   }
 }

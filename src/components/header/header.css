@@ -58,11 +58,11 @@
   margin-bottom: 0;
 }
 
-.content .header_bottom {
+.content .header-bottom {
   text-align: center;
 }
 
-.content .header_bottom .menu {
+.content .header-bottom .menu {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,8 +70,8 @@
   margin-bottom: 60px;
 }
 
-.content .header_bottom .menu a,
-.content .header_bottom .menu button {
+.content .header-bottom .menu a,
+.content .header-bottom .menu button {
   color: #ffff;
   background-color: transparent !important;
   border: none;
@@ -82,8 +82,8 @@
   font-family: "neue-haas-grotesk-display", sans-serif !important;
   position: relative;
 }
-.content .header_bottom .menu a::after,
-.content .header_bottom .menu button::after {
+.content .header-bottom .menu a::after,
+.content .header-bottom .menu button::after {
   content: "";
   position: absolute;
   left: 0;
@@ -94,11 +94,11 @@
   transition: width 0.3s ease; /* Smooth transition effect */
 }
 
-.content .header_bottom .menu button {
+.content .header-bottom .menu button {
   padding: 0 !important;
 }
 
-.header_bottom .down_arrow img {
+.header-bottom .down-arrow img {
   width: 27px;
   cursor: pointer;
 }
@@ -141,13 +141,13 @@
   color: #ffff;
   font-size: 16px !important;
 }
-.sidebar_content {
+.sidebar-content {
   text-align: left;
   padding: 110px 120px;
   font-size: 18px !important;
 }
 
-.sidebar_content .address {
+.sidebar-content .address {
   margin-bottom: 50px !important;
 }
 .sidebar .address p {
@@ -181,7 +181,7 @@
 .form-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   justify-items: start;
   padding: 20px 0 0;
@@ -197,6 +197,12 @@
 
 .sidebar input[type="checkbox"] {
   margin-right: 10px;
+  margin-top: 0px;
+}
+
+.sidebar .form-check {
+  display: flex !important;
+  align-items: center !important;
 }
 
 .sidebar input::placeholder {
@@ -227,12 +233,12 @@
   border-radius: 0 !important;
 }
 
-.sidebar_logo,
-.sidebar_footer_close_btn {
+.sidebar-logo,
+.sidebar-footer-close-btn {
   display: none;
 }
 
-.sidebar_logo img {
+.sidebar-logo img {
   height: 19px;
 }
 
@@ -247,7 +253,7 @@
     width: 100% !important;
   }
 
-  .sidebar_content {
+  .sidebar-content {
     padding: 30px 40px;
   }
 }
@@ -264,12 +270,12 @@
     margin-right: auto;
   }
 
-  .content .header_bottom .menu a,
-  .content .header_bottom .menu button {
+  .content .header-bottom .menu a,
+  .content .header-bottom .menu button {
     font-size: 12px;
   }
 
-  .header_bottom {
+  .header-bottom {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -285,29 +291,27 @@
   .sidebar .closeBtn {
     display: none;
   }
+  .sidebar .closeBtn button {
+    font-size: 14px !important;
+  }
 
-  .sidebar_logo,
-  .sidebar_footer_close_btn {
+  .sidebar-logo,
+  .sidebar-footer-close-btn {
     display: block !important;
   }
 
-  .sidebar_footer {
+  .sidebar-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  .sidebar_footer_close_btn {
-    font-size: 14px !important;
-    display: flex;
-  }
-
-  .sidebar_content {
+  .sidebar-content {
     padding: 100px 0px !important;
     font-size: 12px !important;
   }
 
-  .sidebar_content .address {
+  .sidebar-content .address {
     margin-bottom: 50px !important;
   }
   .sidebar .address p {
@@ -320,15 +324,15 @@
   }
 
   .sidebar button {
-    padding: 8px 0;
-    font-size: 14px;
+    padding: 5px 0;
+    font-size: 14px !important;
     margin-top: 30px;
     width: 133px !important;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .sidebar_content {
+  .sidebar-content {
     padding: 30px 0px;
   }
 
@@ -343,7 +347,7 @@
 }
 
 @media screen and (max-width: 1448px) {
-  .sidebar_content {
+  .sidebar-content {
     padding: 110px 0 110px 70px;
   }
 }

@@ -127,7 +127,7 @@ const Team = () => {
       </div>
 
       {visibleTeamMembers < teamDetails.length && (
-        <div className="loadmore_btn mt-5">
+        <div className="loadmore-btn mt-5">
           <button className="btn btn-dark" onClick={handleLoadMore}>
             View more
           </button>

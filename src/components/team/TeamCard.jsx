@@ -4,10 +4,10 @@ import "./teamCard.css";
 const TeamCard = ({ img, name, designation, phone, email }) => {
   return (
     <div className="teamCard">
-      <div className="team_img">
+      <div className="team-img">
         <img src={img} alt="" loading="lazy" />
       </div>
-      <div className="teamCard_content">
+      <div className="teamCard-content">
         <p className="name">{name}</p>
         <p className="designation mb-3">{designation}</p>
         <p className="phone">{phone}</p>

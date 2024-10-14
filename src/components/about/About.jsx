@@ -7,13 +7,13 @@ const About = () => {
     <div className="container-fluid about">
       <div className="row gx-0">
         <div className="col-12 col-md-6 col-lg-6 ">
-          <div className="about_image">
+          <div className="about-image">
             <img src={img} alt="" />
           </div>
         </div>
         <div className="col-12 col-md-6 col-lg-6 ">
-          <div className="about_content">
-            <div className="about_content_content">
+          <div className="about-content">
+            <div className="about-content-content">
               <p className="heading">
                 We're not your run-of-the-mill real estate agency.
               </p>

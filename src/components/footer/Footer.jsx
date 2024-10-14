@@ -3,7 +3,7 @@ import "./footer.css";
 
 const SocialLinks = () => {
   return (
-    <div className="social_links">
+    <div className="social-links">
       <p>View our listings</p>
       <ul>
         <li>
@@ -46,12 +46,12 @@ const Footer = () => {
           </div>
         )}
         <div className="col-12 col-md-6 col-lg-3">
-          <div className="footer_content">
+          <div className="footer-content">
             <div className="newsletter">
               <p>Subscribe to our newsletter</p>
               <input
                 type="text"
-                className="newsletter_input"
+                className="newsletter-input"
                 placeholder="Enter email address"
               />
             </div>
@@ -60,8 +60,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="col-12 col-md-6 col-lg-2 social_links_container">
-          <div className="footer_content social_links_container">
+        <div className="col-12 col-md-6 col-lg-2 social-links-container">
+          <div className="footer-content social-links-container">
             {!isSmallScreen && <SocialLinks />}
             <p className="mt-auto">Site by LBD STUDIOS</p>
           </div>

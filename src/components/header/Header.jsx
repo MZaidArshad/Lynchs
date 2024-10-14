@@ -1,8 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./header.css";
 
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 500);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 500);
+    };
+
+    // Add event listener for resize
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener on cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleContactClick = () => {
     setShowSidebar(true);
@@ -42,13 +57,13 @@ const Header = () => {
             />
           </div>
           <p>Empowering possibilities through real estate.</p>
-          <div className="header_bottom">
+          <div className="header-bottom">
             <div className="menu">
               <a href="#">Listings</a>
               <button onClick={handleContactClick}>Contact</button>
             </div>
 
-            <div className="down_arrow">
+            <div className="down-arrow">
               <img
                 src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOSIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDI5IDE3IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMSAxTDE0LjUgMTVMMjggMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPg=="
                 alt=""
@@ -63,13 +78,13 @@ const Header = () => {
         <div className="closeBtn">
           <button onClick={() => setShowSidebar(false)}>Close</button>
         </div>
-        <div className="sidebar_logo">
+        <div className="sidebar-logo">
           <img
             src="assets/01 LOGO/PNG (TRANSPARENT)/LYNCHS_RGB_BRANDMARK_WHITE.png"
             alt="logo"
           />
         </div>
-        <div className="sidebar_content">
+        <div className="sidebar-content">
           <div className="address ">
             <p>
               10 Station St <br /> Moorabbin VIC 3189
@@ -126,22 +141,13 @@ const Header = () => {
                   <input
                     className="form-check-input"
                     type="checkbox"
-                    id="selling"
-                  />
-                  <label className="form-check-label" htmlFor="selling">
-                    Selling
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
                     id="rentals"
                   />
                   <label className="form-check-label" htmlFor="rentals">
                     Rentals
                   </label>
                 </div>
+
                 <div className="form-check">
                   <input
                     className="form-check-input"
@@ -152,20 +158,6 @@ const Header = () => {
                     Press
                   </label>
                 </div>
-                <div className="form-check property-management">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="propertyManagement"
-                  />
-                  <label
-                    className="form-check-label"
-                    htmlFor="propertyManagement"
-                  >
-                    Property Management
-                  </label>
-                </div>
-
                 <div className="form-check">
                   <input
                     className="form-check-input"
@@ -176,6 +168,59 @@ const Header = () => {
                     Appraisals
                   </label>
                 </div>
+                {isSmallScreen ? (
+                  <div className="form-check property-management">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      id="propertyManagement"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="propertyManagement"
+                    >
+                      Property Management
+                    </label>
+                  </div>
+                ) : (
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      id="selling"
+                    />
+                    <label className="form-check-label" htmlFor="selling">
+                      Selling
+                    </label>
+                  </div>
+                )}
+                {!isSmallScreen ? (
+                  <div className="form-check property-management">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      id="propertyManagement"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="propertyManagement"
+                    >
+                      Property Management
+                    </label>
+                  </div>
+                ) : (
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      id="selling"
+                    />
+                    <label className="form-check-label" htmlFor="selling">
+                      Selling
+                    </label>
+                  </div>
+                )}
+
                 <div className="form-check">
                   <input
                     className="form-check-input"
@@ -207,9 +252,9 @@ const Header = () => {
                 </a>
               </label>
             </div>
-            <div className="sidebar_footer">
+            <div className="sidebar-footer">
               <button className="btn btn-outline-light w-50">Submit</button>
-              <div className="closeBtn sidebar_footer_close_btn">
+              <div className="closeBtn sidebar-footer-close-btn">
                 <button onClick={() => setShowSidebar(false)}>Close</button>
               </div>
             </div>

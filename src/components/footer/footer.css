@@ -34,7 +34,7 @@
   margin-top: 10px;
 }
 
-.footer_content {
+.footer-content {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -44,11 +44,11 @@
   font-weight: 400;
 }
 
-.footer_content .newsletter p {
+.footer-content .newsletter p {
   margin-bottom: 10px;
 }
 
-.footer_content .newsletter_input {
+.footer-content .newsletter-input {
   background-color: transparent;
   color: #ffff;
   outline: none;
@@ -57,7 +57,7 @@
   width: 100%;
 }
 
-.social_links_container p {
+.social-links-container p {
   text-align: right !important;
 }
 
@@ -70,7 +70,7 @@
     padding-left: 0 !important;
   }
 
-  .social_links_container p {
+  .social-links-container p {
     text-align: left !important;
   }
 
@@ -91,7 +91,7 @@
     order: -2 !important;
   }
 
-  .social_links_div {
+  .social-links-div {
     order: 1 !important;
   }
 }
