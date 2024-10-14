@@ -114,7 +114,7 @@ const Header = () => {
                 />
               </div>
 
-              <div className="col-12 col-md-6 col-lg-6">
+              <div className="col-12 col-md-6 col-lg-6 mb-1">
                 <input
                   type="tel"
                   className="form-control bg-dark text-light border-light"
@@ -124,7 +124,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="mb-3 mt-4">
+            <div className="mb-3" style={{ marginTop: "30px" }}>
               <label className="form-label">Enquiry Type</label>
               <div className="form-grid">
                 <div className="form-check">
@@ -234,7 +234,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="mb-4">
+            <div className="mb-4 " style={{ marginTop: "30px" }}>
               <textarea
                 className="form-control bg-dark text-light border-light"
                 id="notes"
