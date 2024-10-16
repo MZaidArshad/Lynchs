@@ -20,6 +20,22 @@
   z-index: 0;
 }
 
+#background-video::-webkit-media-controls {
+  display: none !important;
+}
+
+#background-video::-moz-media-controls {
+  display: none !important;
+}
+
+#background-video::-ms-media-controls {
+  display: none !important;
+}
+
+#background-video::media-controls {
+  display: none !important;
+}
+
 /* Dark overlay */
 .overlay {
   position: absolute;
