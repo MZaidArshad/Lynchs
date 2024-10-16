@@ -37,7 +37,14 @@ const Header = () => {
   return (
     <div className="header">
       <div className="video-container">
-        <video autoPlay muted loop id="background-video">
+        <video
+          autoPlay
+          muted
+          loop
+          id="background-video"
+          controls={false}
+          playsInline
+        >
           <source
             src="/assets/07 VIDEO/Lynchs_Desktop_No Audio.mp4"
             type="video/mp4"
